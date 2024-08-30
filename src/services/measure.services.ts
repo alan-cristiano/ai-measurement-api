@@ -72,8 +72,6 @@ class MeasureService implements IMeasureService {
         const searchDateTo = new Date(
             `${readingYear}-${(0 + String(readingMonth + 2)).slice(-2)}-01`
         );
-        console.log("search data from -> ", searchDateFrom);
-        console.log("search data to -> ", searchDateTo);
 
         const userReadings = await this.prismaModel.findMany({
             where: {
@@ -127,10 +125,7 @@ class MeasureService implements IMeasureService {
             payload.measure_type
         );
 
-        // const measuredValue = await this.retrieveMeasureValue(
-        //     payload.image
-        // );
-        const measuredValue = "500";
+        const measuredValue = await this.retrieveMeasureValue(payload.image);
 
         const updatedPayload = {
             customer_code: payload.customer_code,
