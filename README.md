@@ -1,10 +1,10 @@
-# Measure Backend
+# AI Measurement API
 
 ## Descrição
 
--   Aplicação backend desenvolvida utilizando do framework Express com TypeScript que gerencia a medição de consumo de água e gás dos usuários.
+-   API REST desenvolvida utilizando do framework Express com TypeScript que gerencia a medição de consumo de água e gás dos usuários.
 -   A leitura dos valores é efetuada utilizando de Inteligência Artificial (Google Gemini API) para a obtenção de valores a partir de uma imagem compartilhada pelo usuário.
--   Projeto desenvolvido utilizando Docker e Docker Compose de forma a permitir uma escalibilidade mais eficaz e um desenvolvimento mais eficiente utilizando containers;
+-   Aplicação desenvolvida utilizando Docker e Docker Compose de forma a permitir uma escalibilidade mais eficaz e um desenvolvimento mais eficiente utilizando containers;
 -   A aplicação implementa a validação e serialização de dados utilizando a biblioteca Zod;
 -   Gerenciamento de banco de dados com Prisma ORM;
 -   Projeto estruturado visando a escalabilidade e melhor manutenção do código. Para isso foi utilizado o padrão de design de software MVC (model-view-controller) e injeção de dependências;
