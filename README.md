@@ -2,7 +2,8 @@
 
 ## Descrição
 
--   Aplicação backend desenvolvida utilizando Node.js (framework Express) com TypeScript que gerencia a medição de consumo de água e gás dos consumidores.
+-   Aplicação backend desenvolvida utilizando do framework Express com TypeScript que gerencia a medição de consumo de água e gás dos usuários.
+-   A leitura dos valores é efetuada utilizando de Inteligência Artificial (Google Gemini API) para a obtenção de valores a partir de uma imagem compartilhada pelo usuário.
 -   Projeto desenvolvido utilizando Docker e Docker Compose de forma a permitir uma escalibilidade mais eficaz e um desenvolvimento mais eficiente utilizando containers;
 -   A aplicação implementa a validação e serialização de dados utilizando a biblioteca Zod;
 -   Gerenciamento de banco de dados com Prisma ORM;
@@ -16,12 +17,13 @@
 -   [Docker](https://docs.docker.com/) e [Docker Compose](https://docs.docker.com/compose/): Plataforma para criação e gerenciamento de aplicações em containers;
 -   Helmet: Middleware para implementação de segurança da aplicação;
 -   [Zod](https://zod.dev/): Validação e serialização de dados;
+-   Google Gemini: Modelo de IA;
 -   TypeScript: Linguagem de programação utilizada.
 
 ## Funcionalidades da aplicação
 
 1. Medição do consumo de água ou gás:
-    - Após o recebimento da imagem do medidor de consumo proveniente da aplicação client, é efetuada uma interação com a Gemini API (Google) de forma a obter a medição através da imagem disponibilizada pelo client;
+    - Após o recebimento da imagem do medidor de consumo proveniente da aplicação cliente, é efetuada uma interação com a Google Gemini API de forma a obter a medição através da imagem disponibilizada pelo client;
     - A medição obtida é retornada à aplicação client para conferência, confirmação ou correção do valor lido. Com a medição confirmada/corrigida os dados são armazenados no banco de dados da aplicação.
 2. Leitura das medições realizadas por determinado cliente:
     - Por meio do código de identificação do cliente é possível listar todas as medições realizadas para esse determinado cliente. Adicionalmente é possível filtrar a listagem levando em consideração o tipo de serviço medido (água ou gás)
